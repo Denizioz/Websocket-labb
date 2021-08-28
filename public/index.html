@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,19 +8,24 @@
     <script src="/socket.io/socket.io.js"></script>
     <title>Document</title>
   </head>
+
   <body>
     <div class="container">
       <h1>Websocket Quiz</h1>
-      <h2 id="question">Vad stämmer på Deniz Holm</h2>
-      <button id="opt1">Han är bäst</button>
-      <button id="opt2">Han är bäst</button>
-      <button id="opt3">han är inte bäst?</button>
-      <button id="opt4"></button>
-      </form>
+      <h2 id="scoreCard">0</h2>
+      <h2 id="questionText">Loading question</h2>
+      <button id="opt1" onclick="pressButton('opt1')">Option 1</button>
+      <button id="opt2" onclick="pressButton('opt2')">Option 2</button>
+      <button id="opt3" onclick="pressButton('opt3')">Option 3</button>
+      <button id="opt4" onclick="pressButton('opt4')">Option 4</button>
     </div>
-    <script>
-      const socket = io();
-    </script>
+    <h3 id="activity"></h3>
+    <div id="logRemover">
+      <dl id="log">
+
+      </dl>
+    </div>
     <script src="client.js"></script>
   </body>
+
 </html>
